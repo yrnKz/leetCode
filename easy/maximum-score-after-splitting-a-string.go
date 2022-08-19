@@ -1,7 +1,7 @@
 package main
 
 func main() {
-	println(maxScore("00"))
+
 }
 
 func maxScore(s string) int {
