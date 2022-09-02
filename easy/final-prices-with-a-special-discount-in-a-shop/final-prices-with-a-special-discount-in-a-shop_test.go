@@ -8,6 +8,8 @@ import (
 
 var nums [][]int
 
+var ns []int
+
 func init() {
 	for j := 0; j < 500; j++ {
 		n := rand.Int31n(500) + 1
@@ -17,11 +19,26 @@ func init() {
 		}
 		nums = append(nums, num)
 	}
-
+	ns = make([]int, 50000)
+	for i := 0; i < int(50000); i++ {
+		ns[i] = rand.Intn(1001)
+	}
 }
 
 func BenchmarkFinalPrices(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		FinalPrices(nums[i%500])
+		FinalPrices(ns)
+	}
+}
+
+func BenchmarkFinalPrices2(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		FinalPrices2(ns)
+	}
+}
+
+func BenchmarkFinalPrices3(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		FinalPrices3(ns)
 	}
 }
