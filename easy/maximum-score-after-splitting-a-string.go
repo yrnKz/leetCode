@@ -1,9 +1,5 @@
 package main
 
-func main() {
-
-}
-
 func maxScore(s string) int {
 	max := 0
 	for i := 1; i <= len(s)-1; i++ {

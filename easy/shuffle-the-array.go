@@ -1,9 +1,5 @@
 package main
 
-func main() {
-
-}
-
 func shuffle(nums []int, n int) []int {
 	ans := make([]int, 2*n)
 	k := 0

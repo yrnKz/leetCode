@@ -1,9 +1,5 @@
 package main
 
-func main() {
-
-}
-
 func canBeEqual(target []int, arr []int) bool {
 	m := make([]int, 1001)
 
