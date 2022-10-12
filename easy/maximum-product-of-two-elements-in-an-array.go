@@ -1,9 +1,5 @@
 package main
 
-func main() {
-
-}
-
 func maxProduct(nums []int) int {
 	var max1, max2 int
 	max1 = nums[0]
